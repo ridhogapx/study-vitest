@@ -1,6 +1,9 @@
-const Toggler = () => {
+import Toggle from "../types/Toggle"
+
+const Toggler = (props: Toggle) => {
+    const { handler } = props
     return(
-        <button>Toggle Title</button>
+        <button onClick={handler}>Toggle Title</button>
     )
 }
 
