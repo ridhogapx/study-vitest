@@ -7,14 +7,18 @@ import Toggler from './components/Toggler'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [display, setDisplay] = useState(true)
+
   const toggleHandler = () => {
-    console.log("Test...")
+    setDisplay((current) => !current)
   }
 
   return (
     <>
       <div>
-        <Header title="Welcome to my apps!"/>
+        {display && 
+          <Header title="Welcome to my apps!"/>
+        }
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
