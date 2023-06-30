@@ -7,6 +7,9 @@ import Toggler from './components/Toggler'
 
 function App() {
   const [count, setCount] = useState(0)
+  const toggleHandler = () => {
+    console.log("Test...")
+  }
 
   return (
     <>
@@ -24,7 +27,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <Toggler />
+        <Toggler handler={toggleHandler} />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
